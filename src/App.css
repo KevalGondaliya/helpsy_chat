@@ -5,8 +5,14 @@
 img {
 	max-width: 100%;
 }
+.headerStyle {
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+}
 .userName {
 	font-family: 'Inter';
+	font-weight: 400;
 	text-align: center;
 	margin-top: 10px;
 	padding-bottom: 10px;
@@ -29,10 +35,11 @@ img {
 .avatarImg {
 }
 .UImg {
-	margin-top: 13px;
 	text-align: center;
 	border-radius: 50px;
 	margin-inline: 45%;
+	top: 10px;
+	position: relative;
 }
 .recent_heading {
 	float: left;
@@ -126,60 +133,78 @@ img {
 }
 .received_withd_msg p {
 	background: #f5f5f5 none repeat scroll 0 0;
-	border-radius: 3px;
-	color: #646464;
-	font-size: 14px;
-	margin: 0;
-	padding: 5px 10px 5px 12px;
+	border-radius: 10px;
+	color: #000;
+	font-size: 16px;
+	margin: 7px;
+	padding: 10px;
 	width: 100%;
+	font-family: 'Inter';
+	font-weight: 400;
+	width: fit-content;
 }
 .time_date {
 	color: #747474;
 	display: block;
-	font-size: 12px;
-	margin: 8px 0 0;
+	font-size: 14px;
+	margin: 8px 10px 3px 15px;
+}
+.time_date_out {
+	color: #747474;
+	display: block;
+	font-size: 14px;
+	margin: 55px 10px 2px 222px;
+	/* position: relative;
+	left: 72%; */
 }
 .received_withd_msg {
-	width: 57%;
+	width: 95%;
 }
 .mesgs {
 	float: left;
-	padding: 0px 15px 0 25px;
+	padding: 0px 15px 0 10px;
 	/* width: 60%; */
 }
 
 .sent_msg p {
 	background: #33a4a4 none repeat scroll 0 0;
-	border-radius: 3px;
-	font-size: 14px;
-	margin: 0;
+	border-radius: 10px;
+	font-size: 16px;
+	margin: 7px;
 	color: #fff;
-	padding: 5px 10px 5px 12px;
+	padding: 10px;
+	font-family: 'Inter';
+	font-weight: 400;
+	float: right;
 	/* width:100%; */
+	width: fit-content;
 }
 .outgoing_msg {
 	overflow: hidden;
-	margin: 26px 0 26px;
+	/* margin: 26px 0 26px; */
 }
 .sent_msg {
 	float: right;
-	width: 46%;
+	width: 75%;
 }
 .input_msg_write input {
 	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
 	border: medium none;
 	color: #4c4c4c;
 	font-size: 15px;
-	min-height: 48px;
-	width: 100%;
+	min-height: 51px;
+	padding: 15px;
+	width: 75%;
 }
 
 .type_msg {
 	border-top: 1px solid #c4c4c4;
-	position: relative;
+	position: sticky;
+	bottom: 0;
+	background-color: #fff;
 }
 .msg_send_btn {
-	background: #05728f none repeat scroll 0 0;
+	/* background: #05728f none repeat scroll 0 0;
 	border: medium none;
 	border-radius: 50%;
 	color: #fff;
@@ -189,21 +214,152 @@ img {
 	position: absolute;
 	right: 0;
 	top: 11px;
-	width: 33px;
+	width: 33px; */
+	background: transparent;
+	border: medium none;
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+	font-size: 17px;
+	height: 50px;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	/* padding: 0; */
+	width: 50px;
 }
 .messaging {
-	padding: 0 0 50px 0;
+	padding: 0 0 0 0;
 }
 .msg_history {
-	height: 516px;
 	overflow-y: auto;
 }
 
 .lableDayWise {
 	text-align: center;
+	font-family: 'Inter';
+	font-weight: 300;
+	color: #a2a2a2;
 }
-
+.lableDayWise p {
+	margin: 0;
+}
+.write_msg {
+	opacity: 0.5;
+}
+/* inter-100 - latin */
+/* inter-500 - latin */
+/* IE6-IE8 */
+/* Super Modern Browsers */
+/* Modern Browsers */
+/* Safari, Android, iOS */
+/* Legacy iOS */
 @font-face {
 	font-family: 'Inter';
-	src: url(assets/fonts/Inter-Italic.ttf);
+	font-style: normal;
+	font-weight: 100;
+	src: url('assets/fonts/inter-v2-latin-100.eot'); /* IE9 Compat Modes */
+	src: local(''), url('assets/fonts/inter-v2-latin-100.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/inter-v2-latin-100.woff2') format('woff2'),
+		url('assets/fonts/inter-v2-latin-100.woff') format('woff'),
+		url('assets/fonts/inter-v2-latin-100.ttf') format('truetype'),
+		url('assets/fonts/inter-v2-latin-100.svg#Inter') format('svg');
 }
+/* inter-200 - latin */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 200;
+	src: url('assets/fonts/inter-v2-latin-200.eot'); /* IE9 Compat Modes */
+	src: local(''), url('assets/fonts/inter-v2-latin-200.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/inter-v2-latin-200.woff2') format('woff2'),
+		url('assets/fonts/inter-v2-latin-200.woff') format('woff'),
+		url('assets/fonts/inter-v2-latin-200.ttf') format('truetype'),
+		url('assets/fonts/inter-v2-latin-200.svg#Inter') format('svg');
+}
+/* inter-300 - latin */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 300;
+	src: url('assets/fonts/inter-v2-latin-300.eot'); /* IE9 Compat Modes */
+	src: local(''), url('assets/fonts/inter-v2-latin-300.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/inter-v2-latin-300.woff2') format('woff2'),
+		url('assets/fonts/inter-v2-latin-300.woff') format('woff'),
+		url('assets/fonts/inter-v2-latin-300.ttf') format('truetype'),
+		url('assets/fonts/inter-v2-latin-300.svg#Inter') format('svg');
+}
+/* inter-regular - latin */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	src: url('assets/fonts/inter-v2-latin-regular.eot'); /* IE9 Compat Modes */
+	src: local(''), url('assets/fonts/inter-v2-latin-regular.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/inter-v2-latin-regular.woff2') format('woff2'),
+		url('assets/fonts/inter-v2-latin-regular.woff') format('woff'),
+		url('assets/fonts/inter-v2-latin-regular.ttf') format('truetype'),
+		url('assets/fonts/inter-v2-latin-regular.svg#Inter') format('svg');
+}
+/* inter-500 - latin */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	src: url('assets/fonts/inter-v2-latin-500.eot'); /* IE9 Compat Modes */
+	src: local(''), url('assets/fonts/inter-v2-latin-500.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/inter-v2-latin-500.woff2') format('woff2'),
+		url('assets/fonts/inter-v2-latin-500.woff') format('woff'),
+		url('assets/fonts/inter-v2-latin-500.ttf') format('truetype'),
+		url('assets/fonts/inter-v2-latin-500.svg#Inter') format('svg');
+}
+/* inter-600 - latin */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	src: url('assets/fonts/inter-v2-latin-600.eot'); /* IE9 Compat Modes */
+	src: local(''), url('assets/fonts/inter-v2-latin-600.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/inter-v2-latin-600.woff2') format('woff2'),
+		url('assets/fonts/inter-v2-latin-600.woff') format('woff'),
+		url('assets/fonts/inter-v2-latin-600.ttf') format('truetype'),
+		url('assets/fonts/inter-v2-latin-600.svg#Inter') format('svg');
+}
+/* inter-700 - latin */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	src: url('assets/fonts/inter-v2-latin-700.eot'); /* IE9 Compat Modes */
+	src: local(''), url('assets/fonts/inter-v2-latin-700.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/inter-v2-latin-700.woff2') format('woff2'),
+		url('assets/fonts/inter-v2-latin-700.woff') format('woff'),
+		url('assets/fonts/inter-v2-latin-700.ttf') format('truetype'),
+		url('assets/fonts/inter-v2-latin-700.svg#Inter') format('svg');
+}
+/* inter-800 - latin */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 800;
+	src: url('assets/fonts/inter-v2-latin-800.eot'); /* IE9 Compat Modes */
+	src: local(''), url('assets/fonts/inter-v2-latin-800.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/inter-v2-latin-800.woff2') format('woff2'),
+		url('assets/fonts/inter-v2-latin-800.woff') format('woff'),
+		url('assets/fonts/inter-v2-latin-800.ttf') format('truetype'),
+		url('assets/fonts/inter-v2-latin-800.svg#Inter') format('svg');
+}
+/* inter-900 - latin */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 900;
+	src: url('assets/fonts/inter-v2-latin-900.eot'); /* IE9 Compat Modes */
+	src: local(''), url('assets/fonts/inter-v2-latin-900.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/inter-v2-latin-900.woff2') format('woff2'),
+		url('assets/fonts/inter-v2-latin-900.woff') format('woff'),
+		url('assets/fonts/inter-v2-latin-900.ttf') format('truetype'),
+		url('assets/fonts/inter-v2-latin-900.svg#Inter') format('svg');
+}
+
+

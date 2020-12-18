@@ -1,75 +1,156 @@
 import logo from './logo.svg'
 import './App.css'
 import usrImg from './assets/avatar.png'
+import sendIcon from './assets/send.png'
 
 function App() {
 	return (
 		<div className="App">
-			<div className="container">
+			<div className="headerStyle">
 				<div className="UImg">
 					<div className="avatarImg">
 						<img src={usrImg} alt="user image" width="45px" />
 					</div>
 				</div>
-
 				<h3 className="userName">Sanbot</h3>
+			</div>
+			<div className="container">
 				<div className="messaging">
 					<div className="inbox_msg">
 						<div className="mesgs">
-							<div className="lableDayWise">
-								<p>Yesterday</p>
-							</div>
 							<div className="msg_history">
+								<div className="lableDayWise">
+									<p>Yesterday</p>
+								</div>
 								<div className="incoming_msg">
 									<div className="received_msg">
 										<div className="received_withd_msg">
-											<p>Test which is a new approach to have all solutions</p>
-											<span className="time_date"> 11:01 AM | June 9</span>
+											<p>Hi, I'm San</p>
 										</div>
-									</div>
-								</div>
-								<div className="outgoing_msg">
-									<div className="sent_msg">
-										<p>Test which is a new approach to have all solutions</p>
-										<span className="time_date"> 11:01 AM | June 9</span>{' '}
 									</div>
 								</div>
 								<div className="incoming_msg">
 									<div className="received_msg">
 										<div className="received_withd_msg">
-											<p>Test, which is a new approach to have</p>
-											<span className="time_date"> 11:01 AM | Yesterday</span>
+											<p>How can i Help you today?</p>
+											<span className="time_date"> 11:01 AM</span>
 										</div>
+									</div>
+								</div>
+
+								<div className="outgoing_msg">
+									<div className="sent_msg">
+										<p>I want to learn more about common cancer symptoms</p>
+										<span className="time_date_out"> 11:01 AM</span>
 									</div>
 								</div>
 								<div className="outgoing_msg">
 									<div className="sent_msg">
-										<p>Apollo University, Delhi, India Test</p>
-										<span className="time_date"> 11:01 AM | Today</span>{' '}
+										<p>I want to learn more about common cancer symptoms</p>
+										<span className="time_date_out"> 11:01 AM</span>
+									</div>
+								</div>
+								<div className="outgoing_msg">
+									<div className="sent_msg">
+										<p>I want to learn more about common cancer symptoms</p>
+										<span className="time_date_out"> 11:01 AM</span>
+									</div>
+								</div>
+								<div className="outgoing_msg">
+									<div className="sent_msg">
+										<p>I want to learn more about common cancer symptoms</p>
+										<span className="time_date_out"> 11:01 AM</span>
+									</div>
+								</div>
+								<div className="outgoing_msg">
+									<div className="sent_msg">
+										<p>I want to learn more about common cancer symptoms</p>
+										<span className="time_date_out"> 11:01 AM</span>
+									</div>
+								</div>
+								<div className="outgoing_msg">
+									<div className="sent_msg">
+										<p>I want to learn more about common cancer symptoms</p>
+										<span className="time_date_out"> 11:01 AM</span>
+									</div>
+								</div>
+								<div className="outgoing_msg">
+									<div className="sent_msg">
+										<p>I want to learn more about common cancer symptoms</p>
+										<span className="time_date_out"> 11:01 AM</span>
+									</div>
+								</div>
+								<div className="outgoing_msg">
+									<div className="sent_msg">
+										<p>I want to learn more about common cancer symptoms</p>
+										<span className="time_date_out"> 11:01 AM</span>
+									</div>
+								</div>
+								<div className="outgoing_msg">
+									<div className="sent_msg">
+										<p>I want to learn more about common cancer symptoms</p>
+										<span className="time_date_out"> 11:01 AM</span>
+									</div>
+								</div>
+								<div className="outgoing_msg">
+									<div className="sent_msg">
+										<p>I want to learn more about common cancer symptoms</p>
+										<span className="time_date_out"> 11:01 AM</span>
+									</div>
+								</div>
+								<div className="outgoing_msg">
+									<div className="sent_msg">
+										<p>I want to learn more about common cancer symptoms</p>
+										<span className="time_date_out"> 11:01 AM</span>
+									</div>
+								</div>
+								<div className="outgoing_msg">
+									<div className="sent_msg">
+										<p>I want to learn more about common cancer symptoms</p>
+										<span className="time_date_out"> 11:01 AM</span>
+									</div>
+								</div>
+
+								<div className="incoming_msg">
+									<div className="received_msg">
+										<div className="received_withd_msg">
+											<p>Which cancer do you want to know more about?</p>
+											<span className="time_date"> 11:01 AM</span>
+										</div>
+									</div>
+								</div>
+								<div className="lableDayWise">
+									<p>Today</p>
+								</div>
+								<div className="outgoing_msg">
+									<div className="sent_msg">
+										<p>Thyroid cancer</p>
+										<span className="time_date_out"> 11:01 AM</span>
 									</div>
 								</div>
 								<div className="incoming_msg">
 									<div className="received_msg">
 										<div className="received_withd_msg">
 											<p>
-												We work directly with our designers and suppliers, <br />
-												<a href="https://kevalgondaliya.github.io/">https://www.upwork.com/</a>
+												Here is an article about common thyroid cancer symptoms:
+												<br />
+												<a href="https://www.thyroid-cancer.com">https://www.thyroid-cancer.com</a>
 											</p>
-											<span className="time_date"> 11:01 AM | Today</span>
+											<span className="time_date"> 11:01 AM</span>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div className="type_msg">
-								<div className="input_msg_write">
-									<input type="text" className="write_msg" placeholder="Type a message" />
-									<button className="msg_send_btn" type="button">
-										<i className="fa fa-paper-plane-o" aria-hidden="true"></i>
-									</button>
-								</div>
-							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div className="type_msg">
+				<div className="input_msg_write">
+					<input type="text" className="write_msg" placeholder="Type a message here..." />
+					<button className="msg_send_btn" type="button">
+						<img src={sendIcon} alt="send"  />
+					</button>
 				</div>
 			</div>
 		</div>
