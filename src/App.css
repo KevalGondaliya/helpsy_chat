@@ -204,17 +204,6 @@ img {
 	background-color: #fff;
 }
 .msg_send_btn {
-	/* background: #05728f none repeat scroll 0 0;
-	border: medium none;
-	border-radius: 50%;
-	color: #fff;
-	cursor: pointer;
-	font-size: 17px;
-	height: 33px;
-	position: absolute;
-	right: 0;
-	top: 11px;
-	width: 33px; */
 	background: transparent;
 	border: medium none;
 	border-radius: 50%;
@@ -247,6 +236,19 @@ img {
 .write_msg {
 	opacity: 0.5;
 }
+
+/* like & dislike btn css */
+
+.likesBtn {
+	background-color: #e7e7e7;
+	border-radius: 10px;
+	width: fit-content;
+	padding: 10px;
+}
+#likeImg {
+	padding-right: 15px;
+}
+
 /* inter-100 - latin */
 /* inter-500 - latin */
 /* IE6-IE8 */
@@ -361,5 +363,3 @@ img {
 		url('assets/fonts/inter-v2-latin-900.ttf') format('truetype'),
 		url('assets/fonts/inter-v2-latin-900.svg#Inter') format('svg');
 }
-
-
