@@ -248,7 +248,18 @@ img {
 #likeImg {
 	padding-right: 15px;
 }
-
+/* modal css */
+.modal {
+	background: rgba(0, 0, 0, 0.6);
+}
+.modal-container {
+	/* position: absolute; */
+	width: 100%;
+	background: #ffffff;
+	/* left: 25%; */
+	top: 30%;
+	/* padding: 20px; */
+}
 /* inter-100 - latin */
 /* inter-500 - latin */
 /* IE6-IE8 */

@@ -1,5 +1,5 @@
 import logo from './logo.svg'
-import React from 'react';
+import React from 'react'
 import './App.css'
 import usrImg from './assets/avatar.png'
 import sendIcon from './assets/send.png'

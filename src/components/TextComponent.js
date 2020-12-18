@@ -3,9 +3,12 @@ import './../App.css'
 import useLongPress from './useLongPress'
 import like from './../assets/like.png'
 import dislike from './../assets/dislike.png'
+import Modal from './../components/Modal'
 
 const TextComponent = props => {
 	const [longPress, setLongPress] = useState(false)
+	const [modal, setModal] = useState(false)
+	console.log('modal', modal)
 	const onLongPress = () => {
 		setLongPress(true)
 	}
@@ -16,6 +19,16 @@ const TextComponent = props => {
 
 	const onLike = () => {
 		setLongPress(false)
+	}
+
+	const modalOpen = () => {
+		console.log('open')
+		setModal(true)
+	}
+
+	const modalClose = () => {
+		console.log('close')
+		setModal(false)
 	}
 	const defaultOptions = {
 		shouldPreventDefault: true,
@@ -75,14 +88,22 @@ const TextComponent = props => {
 								<span className="time_date_out"> 11:01 AM</span>
 							</div>
 						</div>
+						{console.log('modal -in hml', modal)}
 						<div className="incoming_msg">
 							<div className="received_msg">
 								<div className="received_withd_msg">
 									<p>
 										Here is an article about common thyroid cancer symptoms:
 										<br />
-										<a href="https://www.thyroid-cancer.com">https://www.thyroid-cancer.com</a>
+										<a href="javascript:;" onClick={e => modalOpen(e)}>
+											https://www.thyroid-cancer.com
+										</a>
 									</p>
+									<Modal show={modal} handleClose={e => modalClose(e)}>
+										<div>
+											<iframe title="modal" src="https://kevalgondaliya.github.io/" />
+										</div>
+									</Modal>
 									<span className="time_date"> 11:01 AM</span>
 								</div>
 							</div>
