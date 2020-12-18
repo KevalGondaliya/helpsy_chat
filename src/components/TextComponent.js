@@ -101,7 +101,7 @@ const TextComponent = props => {
 									</p>
 									<Modal show={modal} handleClose={e => modalClose(e)}>
 										<div>
-											<iframe title="modal" src="https://kevalgondaliya.github.io/" />
+											<iframe title="modal" src="https://kevalgondaliya.github.io/" className="iframStyle"/>
 										</div>
 									</Modal>
 									<span className="time_date"> 11:01 AM</span>

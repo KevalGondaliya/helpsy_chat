@@ -1,17 +1,18 @@
 import React from 'react'
-
+import './../App.css'
 const Modal = ({ handleClose, show, children }) => {
-	console.log('show', show)
+	console.log('children', children)
 	const classes = {
 		showModal: {
 			display: 'block',
+			width: 100,
 		},
 		hideModal: {
 			display: 'none',
 		},
 	}
 	const showHideClassName = show ? classes.showModal : classes.hideModal
-
+	console.log('showHideClassName, ', showHideClassName.display)
 	return (
 		<div className={showHideClassName}>
 			<div className="modal-container">

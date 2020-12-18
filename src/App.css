@@ -253,13 +253,18 @@ img {
 	background: rgba(0, 0, 0, 0.6);
 }
 .modal-container {
-	/* position: absolute; */
 	width: 100%;
 	background: #ffffff;
-	/* left: 25%; */
 	top: 30%;
-	/* padding: 20px; */
 }
+.iframStyle {
+	width: 110%;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+	height: 500px;
+}
+
+/* margin-top: 10px;
 /* inter-100 - latin */
 /* inter-500 - latin */
 /* IE6-IE8 */
