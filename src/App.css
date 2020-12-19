@@ -34,11 +34,22 @@ img {
 }
 .avatarImg {
 }
+.avatarImgF {
+}
+#likeImgf {
+	margin-right: 10px;
+}
 .UImg {
 	text-align: center;
 	border-radius: 50px;
 	margin-inline: 45%;
 	top: 10px;
+	position: relative;
+}
+.UImgF {
+	text-align: center;
+	border-radius: 50px;
+	margin-inline: 45%;
 	position: relative;
 }
 .recent_heading {
@@ -245,33 +256,35 @@ img {
 	width: fit-content;
 	padding: 10px;
 }
+.likesBtnF {
+	border-radius: 10px;
+	width: fit-content;
+	padding: 10px;
+	position: absolute;
+	right: 15px;
+}
 #likeImg {
 	padding-right: 15px;
 }
-/* modal css */
-.modal {
-	background: rgba(0, 0, 0, 0.6);
+.modal-footer {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	align-items: center !important;
+	justify-content: flex-start !important;
+	padding: 0.75rem !important;
+	border-top: 1px solid #dee2e6 !important;
+	border-bottom-right-radius: calc(0.3rem - 1px) !important;
+	border-bottom-left-radius: calc(0.3rem - 1px) !important;
 }
-.modal-container {
-	width: 100%;
-	background: #ffffff;
-	top: 30%;
-}
+
 .iframStyle {
-	width: 110%;
 	border-top-right-radius: 15px;
 	border-top-left-radius: 15px;
 	height: 500px;
+	border: 1px solid #efefef;
+	width: 100%;
 }
-
-/* margin-top: 10px;
-/* inter-100 - latin */
-/* inter-500 - latin */
-/* IE6-IE8 */
-/* Super Modern Browsers */
-/* Modern Browsers */
-/* Safari, Android, iOS */
-/* Legacy iOS */
+/* inter font */
 @font-face {
 	font-family: 'Inter';
 	font-style: normal;

@@ -27,7 +27,7 @@ const TextComponent = props => {
 	}
 
 	const modalClose = () => {
-		console.log('close')
+		console.log('close', modal)
 		setModal(false)
 	}
 	const defaultOptions = {
@@ -88,7 +88,6 @@ const TextComponent = props => {
 								<span className="time_date_out"> 11:01 AM</span>
 							</div>
 						</div>
-						{console.log('modal -in hml', modal)}
 						<div className="incoming_msg">
 							<div className="received_msg">
 								<div className="received_withd_msg">
@@ -99,11 +98,7 @@ const TextComponent = props => {
 											https://www.thyroid-cancer.com
 										</a>
 									</p>
-									<Modal show={modal} handleClose={e => modalClose(e)}>
-										<div>
-											<iframe title="modal" src="https://kevalgondaliya.github.io/" className="iframStyle"/>
-										</div>
-									</Modal>
+									{modal ? <Modal show={modal} handleClose={modalClose}></Modal> : null}
 									<span className="time_date"> 11:01 AM</span>
 								</div>
 							</div>

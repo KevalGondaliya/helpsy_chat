@@ -1,25 +1,50 @@
 import React from 'react'
 import './../App.css'
+import usrImg from './../assets/avatar.png'
+import like from './../assets/like.png'
+import dislike from './../assets/dislike.png'
+
 const Modal = ({ handleClose, show, children }) => {
-	console.log('children', children)
-	const classes = {
-		showModal: {
-			display: 'block',
-			width: 100,
-		},
-		hideModal: {
-			display: 'none',
-		},
+	const onLike = () => {
+		console.log('liked')
 	}
-	const showHideClassName = show ? classes.showModal : classes.hideModal
-	console.log('showHideClassName, ', showHideClassName.display)
 	return (
-		<div className={showHideClassName}>
-			<div className="modal-container">
-				{children}
-				<a href="javascript:;" className="modal-close" onClick={handleClose}>
-					close
-				</a>
+		<div
+			className="modal fade"
+			className={show ? 'modal fade show' : 'modal fade'}
+			style={{ display: show ? 'block' : 'none', backgroundColor: '#0000001c' }}
+			id="exampleModalLong"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="exampleModalLongTitle"
+			aria-hidden="true"
+		>
+			<button
+				type="button"
+				class="close"
+				data-dismiss="modal"
+				aria-label="Close"
+				onClick={handleClose}
+			>
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<div className="modal-dialog" role="document" style={{ marginTop: '38%' }}>
+				<div className="modal-content">
+					<div>
+						<iframe title="modal" src="https://kevalgondaliya.github.io/" className="iframStyle" />
+					</div>
+					<div className="modal-footer">
+						<div className="UImgF">
+							<div className="avatarImgF">
+								<img src={usrImg} alt="user image" width="45px" />
+							</div>
+						</div>
+						<div className="likesBtnF" onClick={onLike}>
+							<img src={like} alt="user image" width="20px" id="likeImgf" />
+							<img src={dislike} alt="user image" width="20px" />
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	)
