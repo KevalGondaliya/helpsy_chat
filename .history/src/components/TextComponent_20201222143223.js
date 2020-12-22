@@ -61,7 +61,7 @@ const TextComponent = ({ messages, loggedInUserId }) => {
                       <div className="received_withd_msg" {...longPressEvent}>
                         <p>{message.message}</p>
                       </div>
-                      <span className="time_date">
+                      <span className="time_date_out">
                         {moment(message.createdAt).format("hh:mm a")}
                       </span>
                       {longPress && (

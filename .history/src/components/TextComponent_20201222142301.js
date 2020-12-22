@@ -5,7 +5,7 @@ import like from "./../assets/like.png";
 import dislike from "./../assets/dislike.png";
 import Modal from "./../components/Modal";
 import IncommingMessage from "./../components/IncomingMessage";
-import moment from "moment";
+
 const TextComponent = ({ messages, loggedInUserId }) => {
   const [longPress, setLongPress] = useState(false);
   const [modal, setModal] = useState(false);
@@ -13,6 +13,7 @@ const TextComponent = ({ messages, loggedInUserId }) => {
   const onLongPress = () => {
     setLongPress(true);
   };
+
   const onClick = () => {
     console.log("click is triggered");
   };
@@ -61,9 +62,6 @@ const TextComponent = ({ messages, loggedInUserId }) => {
                       <div className="received_withd_msg" {...longPressEvent}>
                         <p>{message.message}</p>
                       </div>
-                      <span className="time_date">
-                        {moment(message.createdAt).format("hh:mm a")}
-                      </span>
                       {longPress && (
                         <div className="likesBtn" onClick={onLike}>
                           <img

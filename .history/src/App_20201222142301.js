@@ -1,14 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import usrImg from "./assets/avatar.png";
 import sendIcon from "./assets/send.png";
 import TextComponent from "./components/TextComponent";
 import backArrow from "./assets/left-arrow.png";
-import moment from "moment";
+
 const App = () => {
   let loggedInUserId = 1;
   const [isTyping, setIsTyping] = useState(false);
-  const inputRef = useRef(null);
   const [messages, updateMessages] = useState([
     {
       message: "I wants to learn more about common cancer symptoms",
@@ -42,19 +41,7 @@ const App = () => {
       setIsTyping(false);
     }
   };
-  const addMessage = () => {
-    updateMessages([
-      ...messages,
-      {
-        message: inputRef.current.value,
-        createdAt: moment().toISOString(),
-        id: messages.length + 1,
-        userId: loggedInUserId,
-      },
-    ]);
-    setIsTyping(false);
-    inputRef.current.value = null;
-  };
+
   return (
     <div className="App">
       <div className="container">
@@ -93,17 +80,12 @@ const App = () => {
                   )}
                   <div className="input_msg_write">
                     <input
-                      ref={inputRef}
                       type="text"
                       className="write_msg"
                       onChange={(e) => onTypingMessage(e)}
                       placeholder="Type a message here..."
                     />
-                    <button
-                      className="msg_send_btn"
-                      onClick={addMessage}
-                      type="button"
-                    >
+                    <button className="msg_send_btn" type="button">
                       <img src={sendIcon} alt="send" />
                     </button>
                   </div>

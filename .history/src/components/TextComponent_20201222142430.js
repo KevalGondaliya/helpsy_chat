@@ -61,9 +61,6 @@ const TextComponent = ({ messages, loggedInUserId }) => {
                       <div className="received_withd_msg" {...longPressEvent}>
                         <p>{message.message}</p>
                       </div>
-                      <span className="time_date">
-                        {moment(message.createdAt).format("hh:mm a")}
-                      </span>
                       {longPress && (
                         <div className="likesBtn" onClick={onLike}>
                           <img

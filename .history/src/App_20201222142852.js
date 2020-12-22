@@ -4,7 +4,7 @@ import usrImg from "./assets/avatar.png";
 import sendIcon from "./assets/send.png";
 import TextComponent from "./components/TextComponent";
 import backArrow from "./assets/left-arrow.png";
-import moment from "moment";
+
 const App = () => {
   let loggedInUserId = 1;
   const [isTyping, setIsTyping] = useState(false);
@@ -43,17 +43,7 @@ const App = () => {
     }
   };
   const addMessage = () => {
-    updateMessages([
-      ...messages,
-      {
-        message: inputRef.current.value,
-        createdAt: moment().toISOString(),
-        id: messages.length + 1,
-        userId: loggedInUserId,
-      },
-    ]);
-    setIsTyping(false);
-    inputRef.current.value = null;
+    console.log(inputRef.current.value);
   };
   return (
     <div className="App">
@@ -93,7 +83,7 @@ const App = () => {
                   )}
                   <div className="input_msg_write">
                     <input
-                      ref={inputRef}
+                      useRef={inputRef}
                       type="text"
                       className="write_msg"
                       onChange={(e) => onTypingMessage(e)}

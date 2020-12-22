@@ -4,7 +4,7 @@ import usrImg from "./assets/avatar.png";
 import sendIcon from "./assets/send.png";
 import TextComponent from "./components/TextComponent";
 import backArrow from "./assets/left-arrow.png";
-import moment from "moment";
+
 const App = () => {
   let loggedInUserId = 1;
   const [isTyping, setIsTyping] = useState(false);
