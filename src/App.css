@@ -6,9 +6,17 @@ img {
 	max-width: 100%;
 }
 .headerStyle {
-	position: sticky;
+	position: fixed;
 	top: 0;
+	left: 0;
 	background-color: #fff;
+	right: 0;
+}
+
+.backBtn {
+	position: absolute;
+	z-index: 1;
+	margin: 30px;
 }
 .userName {
 	font-family: 'Inter';
@@ -164,17 +172,18 @@ img {
 	color: #747474;
 	display: block;
 	font-size: 14px;
-	margin: 55px 10px 2px 222px;
-	/* position: relative;
-	left: 72%; */
+	margin: 0 15px 0 100px;
+	text-align: end;
 }
 .received_withd_msg {
 	width: 95%;
 }
 .mesgs {
 	float: left;
-	padding: 0px 15px 0 10px;
+	/* padding: 0px 15px 0 10px; */
 	/* width: 60%; */
+	margin-top: 15%;
+	margin-bottom: 15%;
 }
 
 .sent_msg p {
@@ -207,12 +216,17 @@ img {
 	padding: 15px;
 	width: 75%;
 }
-
-.type_msg {
+.input_msg_write {
 	border-top: 1px solid #c4c4c4;
-	position: sticky;
+}
+.type_msg {
+	/* border-top: 1px solid #c4c4c4; */
+	position: fixed;
+	/* top: 0; */
 	bottom: 0;
-	background-color: #fff;
+	right: 0;
+	left: 0;
+	background: #fff;
 }
 .msg_send_btn {
 	background: transparent;
@@ -223,8 +237,8 @@ img {
 	font-size: 17px;
 	height: 50px;
 	position: absolute;
-	right: 15px;
-	top: 15px;
+	right: 10px;
+	/* top: 52px; */
 	/* padding: 0; */
 	width: 50px;
 }
@@ -255,6 +269,7 @@ img {
 	border-radius: 10px;
 	width: fit-content;
 	padding: 10px;
+	margin: 7px;
 }
 .likesBtnF {
 	border-radius: 10px;
@@ -264,7 +279,7 @@ img {
 	right: 15px;
 }
 #likeImg {
-	padding-right: 15px;
+	margin-right: 10px;
 }
 .modal-footer {
 	display: flex !important;
@@ -276,14 +291,59 @@ img {
 	border-bottom-right-radius: calc(0.3rem - 1px) !important;
 	border-bottom-left-radius: calc(0.3rem - 1px) !important;
 }
+.modal-content {
+	position: relative !important;
+	display: flex !important;
+	flex-direction: column !important;
+	width: 100% !important;
+	pointer-events: auto !important;
+	background-color: #fff !important;
+	background-clip: padding-box !important;
+	border: 1px solid rgba(0, 0, 0, 0.2) !important;
+	/* border-radius: 0.3rem !important; */
+	outline: 0 !important;
+	border-top-left-radius: 35px !important;
+	border-top-right-radius: 35px !important;
+}
+.modal-header .close {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.modal.show .modal-dialog {
+	transform: none !important;
+	position: absolute;
+	/* top: 0; */
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.modalHeaderLink {
+	position: absolute;
+	left: 50px;
+}
 
 .iframStyle {
-	border-top-right-radius: 15px;
-	border-top-left-radius: 15px;
-	height: 500px;
+	/* border-top-right-radius: 15px;
+	border-top-left-radius: 15px; */
+	height: 400px;
 	border: 1px solid #efefef;
 	width: 100%;
 }
+/* typing text css */
+
+.typingTxt {
+	background-color: #f5f5f5;
+	padding: 5px 15px 8px 19px;
+	border-radius: 10px;
+	width: max-content;
+	margin-left: 33px;
+	margin-bottom: 5px;
+}
+.typingTxt p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 /* inter font */
 @font-face {
 	font-family: 'Inter';

@@ -19,17 +19,20 @@ const Modal = ({ handleClose, show, children }) => {
 			aria-labelledby="exampleModalLongTitle"
 			aria-hidden="true"
 		>
-			<button
-				type="button"
-				class="close"
-				data-dismiss="modal"
-				aria-label="Close"
-				onClick={handleClose}
-			>
-				<span aria-hidden="true">&times;</span>
-			</button>
-			<div className="modal-dialog" role="document" style={{ marginTop: '38%' }}>
+			<div className="modal-dialog" role="document" >
 				<div className="modal-content">
+					<div className="modal-header">
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+							onClick={handleClose}
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<span className="modalHeaderLink">https://kevalgondaliya.github.io/</span>
+					</div>
 					<div>
 						<iframe title="modal" src="https://kevalgondaliya.github.io/" className="iframStyle" />
 					</div>

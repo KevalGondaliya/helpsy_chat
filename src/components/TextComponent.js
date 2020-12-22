@@ -4,11 +4,12 @@ import useLongPress from './useLongPress'
 import like from './../assets/like.png'
 import dislike from './../assets/dislike.png'
 import Modal from './../components/Modal'
+import IncommingMessage from './../components/IncomingMessage'
 
 const TextComponent = props => {
 	const [longPress, setLongPress] = useState(false)
 	const [modal, setModal] = useState(false)
-	console.log('modal', modal)
+
 	const onLongPress = () => {
 		setLongPress(true)
 	}
@@ -68,7 +69,55 @@ const TextComponent = props => {
 						<div className="outgoing_msg">
 							<div className="sent_msg">
 								<p>I want to learn more about common cancer symptoms</p>
-								<span className="time_date_out"> 11:01 AM</span>
+							</div>
+							<span className="time_date_out"> 11:01 AM</span>
+						</div>
+						<div className="incoming_msg">
+							<div className="received_msg">
+								<div className="received_withd_msg">
+									<p>Which cancer do you want to know more about?</p>
+									<span className="time_date"> 11:01 AM</span>
+								</div>
+							</div>
+						</div>
+						<div className="incoming_msg">
+							<div className="received_msg">
+								<div className="received_withd_msg">
+									<p>Which cancer do you want to know more about?</p>
+									<span className="time_date"> 11:01 AM</span>
+								</div>
+							</div>
+						</div>
+						<div className="incoming_msg">
+							<div className="received_msg">
+								<div className="received_withd_msg">
+									<p>Which cancer do you want to know more about?</p>
+									<span className="time_date"> 11:01 AM</span>
+								</div>
+							</div>
+						</div>
+						<div className="incoming_msg">
+							<div className="received_msg">
+								<div className="received_withd_msg">
+									<p>Which cancer do you want to know more about?</p>
+									<span className="time_date"> 11:01 AM</span>
+								</div>
+							</div>
+						</div>
+						<div className="incoming_msg">
+							<div className="received_msg">
+								<div className="received_withd_msg">
+									<p>Which cancer do you want to know more about?</p>
+									<span className="time_date"> 11:01 AM</span>
+								</div>
+							</div>
+						</div>
+						<div className="incoming_msg">
+							<div className="received_msg">
+								<div className="received_withd_msg">
+									<p>Which cancer do you want to know more about?</p>
+									<span className="time_date"> 11:01 AM</span>
+								</div>
 							</div>
 						</div>
 						<div className="incoming_msg">
@@ -85,8 +134,8 @@ const TextComponent = props => {
 						<div className="outgoing_msg">
 							<div className="sent_msg">
 								<p>Thyroid cancer</p>
-								<span className="time_date_out"> 11:01 AM</span>
 							</div>
+							<span className="time_date_out"> 11:01 AM</span>
 						</div>
 						<div className="incoming_msg">
 							<div className="received_msg">
