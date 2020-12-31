@@ -4,24 +4,19 @@ import useLongPress from './useLongPress'
 import like from './../assets/like.png'
 import dislike from './../assets/dislike.png'
 import Modal from './../components/Modal'
-import IncomingMessage from './../components/IncomingMessage'
-
-const OutgoingMessage = () => {
+import IncommingMessage from './../components/IncomingMessage'
+import moment from 'moment'
+const OutgoingMessage = ({ messages, loggedInUserId }) => {
 	const [longPress, setLongPress] = useState(false)
 	const [modal, setModal] = useState(false)
-	const [isTyping, setIsTyping] = useState(false)
 
 	const onLongPress = () => {
 		setLongPress(true)
 	}
-
 	const onClick = () => {
 		console.log('click is triggered')
 	}
 
-	const onTypingMessage = () => {
-		setIsTyping(true)
-	}
 	const onLike = () => {
 		setLongPress(false)
 	}
@@ -40,22 +35,22 @@ const OutgoingMessage = () => {
 		delay: 500,
 	}
 	const longPressEvent = useLongPress(onLongPress, onClick, defaultOptions)
-
+	console.log('message', messages)
 	return (
 		<div>
-			<div className="outgoing_msg">
-				<div className="sent_msg">
-					<p>I want to learn more about common cancer symptoms</p>
-				</div>
-				<span className="time_date_out"> 11:01 AM</span>
-			</div>
-			<IncomingMessage />
-			<div className="outgoing_msg">
-				<div className="sent_msg">
-					<p>Thyroid cancer</p>
-				</div>
-				<span className="time_date_out"> 11:01 AM</span>
-			</div>
+			{messages &&
+				messages.map(message => {
+					return (
+						message.userId === loggedInUserId && (
+							<div className="outgoing_msg">
+								<div className="sent_msg">
+									<p>{message.message}</p>
+								</div>
+								<span className="time_date_out">{moment(message.createdAt).format('hh:mm a')}</span>
+							</div>
+						)
+					)
+				})}
 		</div>
 	)
 }

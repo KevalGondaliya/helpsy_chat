@@ -11,6 +11,8 @@ img {
 	left: 0;
 	background-color: #fff;
 	right: 0;
+	max-width: 425px;
+	margin-inline: auto;
 }
 
 .backBtn {
@@ -146,7 +148,7 @@ img {
 }
 .received_msg {
 	display: inline-block;
-	padding: 0 0 0 10px;
+	padding: 0 0 0 0;
 	vertical-align: top;
 	width: 92%;
 }
@@ -178,11 +180,18 @@ img {
 .received_withd_msg {
 	width: 95%;
 }
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+	max-width: 425px !important;
+}
 .mesgs {
-	float: left;
+	/* float: left; */
 	/* padding: 0px 15px 0 10px; */
 	/* width: 60%; */
-	margin-top: 15%;
+	margin-top: 18%;
 	margin-bottom: 15%;
 }
 
@@ -205,7 +214,7 @@ img {
 }
 .sent_msg {
 	float: right;
-	width: 75%;
+	width: 85%;
 }
 .input_msg_write input {
 	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
@@ -217,16 +226,21 @@ img {
 	width: 75%;
 }
 .input_msg_write {
-	border-top: 1px solid #c4c4c4;
+	border-top: 1px solid #f5f5f5;
+}
+.msgInput {
+	margin: 10px;
+	background-color: #f8f8f8;
+	border-radius: 10px;
 }
 .type_msg {
-	/* border-top: 1px solid #c4c4c4; */
 	position: fixed;
-	/* top: 0; */
 	bottom: 0;
 	right: 0;
 	left: 0;
 	background: #fff;
+	max-width: 425px;
+	margin-inline: auto;
 }
 .msg_send_btn {
 	background: transparent;
@@ -235,15 +249,17 @@ img {
 	color: #fff;
 	cursor: pointer;
 	font-size: 17px;
-	height: 50px;
+	/* height: 50px; */
 	position: absolute;
-	right: 10px;
-	/* top: 52px; */
+	right: 15px;
+	top: 22px;
 	/* padding: 0; */
 	width: 50px;
 }
 .messaging {
 	padding: 0 0 0 0;
+	margin-top: 0;
+	margin-bottom: 120px;
 }
 .msg_history {
 	overflow-y: auto;
@@ -259,17 +275,33 @@ img {
 	margin: 0;
 }
 .write_msg {
+	margin-top: 8px;
+	margin-left: 8px;
+	max-height: 120px;
+	box-sizing: 'border-box';
+	width: 80%;
 	opacity: 0.5;
 }
 
 /* like & dislike btn css */
 
 .likesBtn {
-	background-color: #e7e7e7;
+	/* background-color: #e7e7e7;
 	border-radius: 10px;
+	width: -moz-fit-content;
 	width: fit-content;
 	padding: 10px;
-	margin: 7px;
+	padding-left: -158px;
+	margin-right: -37px; */
+
+	background-color: #e7e7e7;
+	border-radius: 10px;
+	width: -moz-fit-content;
+	width: fit-content;
+	margin-right: -37px;
+	padding: 0.7em;
+
+	margin-left: 8em;
 }
 .likesBtnF {
 	border-radius: 10px;
@@ -279,7 +311,7 @@ img {
 	right: 15px;
 }
 #likeImg {
-	margin-right: 10px;
+	margin-right: 30px;
 }
 .modal-footer {
 	display: flex !important;
@@ -290,6 +322,10 @@ img {
 	border-top: 1px solid #dee2e6 !important;
 	border-bottom-right-radius: calc(0.3rem - 1px) !important;
 	border-bottom-left-radius: calc(0.3rem - 1px) !important;
+}
+.footerText {
+	margin-top: 25px !important;
+	font-size: 10px;
 }
 .modal-content {
 	position: relative !important;
@@ -319,7 +355,8 @@ img {
 }
 .modalHeaderLink {
 	position: absolute;
-	left: 50px;
+	margin-inline: 28px;
+	margin-top: 2px;
 }
 
 .iframStyle {
@@ -343,7 +380,23 @@ img {
 	margin-top: 0;
 	margin-bottom: 0;
 }
-
+.link_desclaimer {
+	font-style: italic;
+	color: rgb(128, 128, 128);
+	font-size: 12px;
+	line-height: 16px;
+	display: block;
+	margin-top: 5px;
+}
+.thumpsBtn {
+	text-align: -webkit-right;
+	height: 0;
+}
+textarea {
+	border: none;
+	background: #f8f8f8;
+	padding: 10px;
+}
 /* inter font */
 @font-face {
 	font-family: 'Inter';

@@ -5,4 +5,6 @@ export const color = {
 	black: '#000000',
 	gray: '#808080',
 	lightGray: '#A9A9A9',
+	linkColor: '#476777',
+	lightCream: '#f8f8f8'
 }
